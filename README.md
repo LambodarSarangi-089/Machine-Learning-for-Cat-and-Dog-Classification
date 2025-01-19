@@ -17,10 +17,7 @@ To classify images as cats or dogs using machine learning models.
 ## Repository Structure
 ```
 Machine-Learning-for-Cat-and-Dog-Classification/
-|-- animals/
-|   |-- cat/
-|   |-- dog/
-|-- datasets/
+|-- datasets/  (Placeholders for downloaded datasets)
 |-- saved_models/
 |   |-- cnn_model.h5
 |   |-- kmeans.pkl
@@ -35,13 +32,34 @@ Machine-Learning-for-Cat-and-Dog-Classification/
 |-- model_training.py
 |-- train_images.npy
 |-- train_labels.npy
+|-- README.md
 ```
+
+1. Data Collection
+   - Download the labeled dataset of cat and dog images from Kaggle:
+     [Dog vs Cat Dataset on Kaggle](https://www.kaggle.com/datasets/anthonytherrien/dog-vs-cat)
+   - Extract and place the downloaded dataset into the datasets/ directory.
+
+2. Preprocessing
+   - Resize images to a uniform size (e.g., 128x128 pixels).
+   - Flatten images into 1D arrays for traditional ML models (SVM, Random Forest, etc.).
+   - Normalize pixel values to a range of 0-1.
+   - Save preprocessed data (e.g., train_images.npy and train_labels.npy) for reuse.
+
+3. Model Training
+   - Train the following models:
+     - Support Vector Machine (SVM): Use sklearn's SVC.
+     - Random Forest: Use sklearn's RandomForestClassifier.
+     - Logistic Regression: Use sklearn's LogisticRegression.
+     - Convolutional Neural Network (CNN): Build with TensorFlow/Keras.
+     - K-means Clustering: For unsupervised classification.
+   - Save the trained models in the saved_models/ directory.
 
 ## Installation
 1. Clone this repository:
    ```bash
    git clone https://github.com/LambodarSarangi-089/Machine-Learning-for-Cat-and-Dog-Classification.git
-   cd cat-dog-classification
+   cd Machine-Learning-for-Cat-and-Dog-Classification
    ```
 2. Install required dependencies:
    ```bash
